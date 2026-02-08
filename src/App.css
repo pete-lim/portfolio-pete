@@ -20,6 +20,9 @@ header {
 h2 {
   @apply text-lg text-accent;
 }
+h3 {
+  @apply text-lg text-primary;
+}
 button {
   @apply text-accent;
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import '@fontsource/inter/400.css';
 import './App.css';
 import HeroSection from './components/Hero';
+import TechStack from './components/TechStack';
 function App() {
   const [theme, setTheme] = useState('light-mode');
   useEffect(() => {
@@ -18,6 +19,7 @@ function App() {
         <button>Contact</button>
       </span>
       <HeroSection />
+      <TechStack />
     </div>
   );
 }
