@@ -4,6 +4,7 @@ import './App.css';
 import HeroSection from './components/Hero';
 import TechStack from './components/TechStack';
 import WorkSection from './components/Work';
+import ContactSection from './components/Contact';
 function App() {
   const [theme, setTheme] = useState('light-mode');
   useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
       <HeroSection />
       <TechStack />
       <WorkSection />
+      <ContactSection />
     </div>
   );
 }
