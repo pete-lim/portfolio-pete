@@ -18,7 +18,7 @@ export default function HeroSection() {
         alt=""
         className="mix-blend-darken mt-10 w-full h-5/10 object-cover"
       />
-      <button className="mt-15 ml-[49%]">
+      <button className="bottom-chevron">
         <FiChevronDown className="text-xl text-accent" />
       </button>
     </div>

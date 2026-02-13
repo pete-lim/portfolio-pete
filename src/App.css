@@ -27,7 +27,7 @@ button {
   @apply text-accent;
 }
 .section {
-  @apply pt-40 h-screen w-8/10 justify-self-center;
+  @apply pt-30 h-screen w-8/10 justify-self-center relative;
 }
 .root {
   scroll-behavior: smooth;
@@ -40,4 +40,15 @@ button {
 .body {
   align-items: center;
   justify-items: center;
+}
+.bottom-chevron {
+  @apply absolute bottom-[5%] left-[50%];
+}
+
+.li-paragraph {
+  @apply text-base/7 ml-8 mb-4 list-disc;
+}
+.scrollbar {
+  scrollbar-color: var(--color-bg) var(--color-secondary);
+  scrollbar-width: thin;
 }

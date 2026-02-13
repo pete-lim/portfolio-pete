@@ -42,7 +42,7 @@ export default function TechStack() {
           </span>
         </div>
       </div>
-      <button className="mt-15 ml-[49%]">
+      <button className="bottom-chevron">
         <FiChevronDown className="text-xl text-accent" />
       </button>
     </div>
