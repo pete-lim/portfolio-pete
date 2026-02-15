@@ -4,6 +4,7 @@ import './App.css';
 import HeroSection from './components/Hero';
 import TechStack from './components/TechStack';
 import WorkSection from './components/Work';
+import ProjectSection from './components/Projects';
 import ContactSection from './components/Contact';
 function App() {
   const [theme, setTheme] = useState('light-mode');
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="root">
       <div className="fixed inset-0 -z-10 bg"></div>
-      <span className="fixed w-screen h-1/10 flex justify-around bg-bg z-99">
+      <span className="fixed w-8/10 justify-self-center h-1/10 flex justify-around bg-bg z-99">
         <button>Home</button>
         <button>Tech</button>
         <button>Work</button>
@@ -23,6 +24,7 @@ function App() {
       <HeroSection />
       <TechStack />
       <WorkSection />
+      <ProjectSection />
       <ContactSection />
     </div>
   );

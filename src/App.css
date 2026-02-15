@@ -15,26 +15,27 @@
 }
 
 header {
-  @apply text-5xl tracking-wider text-primary;
+  @apply text-7xl tracking-wider text-primary;
 }
 h2 {
-  @apply text-lg text-accent;
+  @apply text-2xl text-accent;
 }
 h3 {
-  @apply text-lg text-primary;
+  @apply text-2xl text-primary;
 }
 p {
-  @apply text-base text-accent;
+  @apply text-lg text-accent;
 }
 button {
   @apply text-accent;
 }
 .section {
-  @apply pt-30 h-screen w-8/10 justify-self-center relative;
+  @apply pt-30 h-screen w-8/10 lg:w-5/10 justify-self-center relative;
 }
 .root {
   scroll-behavior: smooth;
   font-family: 'Inter', sans-serif;
+  overflow: hidden;
 }
 .bg {
   background: linear-gradient(var(--color-bg), var(--color-bg-accent));
@@ -49,9 +50,29 @@ button {
 }
 
 .li-paragraph {
-  @apply text-base/7 ml-8 mb-4 list-disc;
+  @apply text-lg/8 ml-8 mb-4 list-disc;
 }
 .scrollbar {
   scrollbar-color: var(--color-bg) var(--color-secondary);
   scrollbar-width: thin;
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+.project-thumbnail {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 3.5%;
+}
+.project-text {
+  @apply text-xl!;
 }

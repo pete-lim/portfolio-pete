@@ -5,7 +5,7 @@ export default function WorkSection() {
   return (
     <div className="section">
       <header className="mb-8">Work</header>
-      <div className="h-4/10 flex flex-col gap-8 overflow-hidden overflow-y-auto p-4 scrollbar">
+      <div className="h-5/10 flex flex-col gap-8 overflow-hidden overflow-y-auto p-4 scrollbar">
         <ul>
           <span className="flex justify-between">
             <h3 className="text-shadow-xs text-2xl!">

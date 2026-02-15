@@ -11,7 +11,11 @@ export default function ContactSection() {
       </h2>
       <h3>
         Email me
-        <a href="mailto:petedaniel.lim@gmail.com" className="underline ml-2">
+        <a
+          href="mailto:petedaniel.lim@gmail.com"
+          aria-label="petedaniel.lim@gmail.com"
+          className="underline ml-2"
+        >
           here
         </a>
       </h3>
@@ -29,6 +33,7 @@ export default function ContactSection() {
       <span className="flex mt-8 text-5xl w-7/12 self-center justify-around text-secondary">
         <a
           href="https://github.com/pete-lim"
+          aria-label="https://github.com/pete-lim"
           target="_blank"
           className="flex flex-col items-center gap-2"
         >
@@ -37,6 +42,7 @@ export default function ContactSection() {
         </a>
         <a
           href="https://linkedin.com/in/pete-lim/"
+          aria-label="https://github.com/pete-lim"
           target="_blank"
           className="flex flex-col items-center gap-2"
         >
