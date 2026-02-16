@@ -6,6 +6,7 @@ import TechStack from './components/TechStack';
 import WorkSection from './components/Work';
 import ProjectSection from './components/Projects';
 import ContactSection from './components/Contact';
+
 function App() {
   const [theme, setTheme] = useState('light-mode');
   useEffect(() => {

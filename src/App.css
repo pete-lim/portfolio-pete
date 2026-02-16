@@ -13,7 +13,9 @@
   --color-bg: #1e1e1e;
   --color-bg-accent: #2a2a2a;
 }
-
+html {
+  user-select: none;
+}
 header {
   @apply text-7xl tracking-wider text-primary;
 }
@@ -72,6 +74,7 @@ button {
   width: 100%;
   border-radius: 12px;
   margin-bottom: 3.5%;
+  @apply shadow-xl;
 }
 .project-text {
   @apply text-xl!;
