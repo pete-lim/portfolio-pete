@@ -3,7 +3,7 @@ import photo from '../assets/images/contact-photo.png';
 import resume from '../assets/images/Pete-Lim-Software-Engineer-CV.webp';
 export default function ContactSection() {
   return (
-    <div className="section flex flex-col gap-6">
+    <section className="section flex flex-col gap-6" id="contact">
       <header className="mb-8">Contact</header>
       <h2>
         I developed this portfolio as memories and keepsake to my border
@@ -55,6 +55,6 @@ export default function ContactSection() {
         alt=""
         className="self-end mix-blend-multiply size-3/4 object-contain"
       />
-    </div>
+    </section>
   );
 }

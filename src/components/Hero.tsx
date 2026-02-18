@@ -3,7 +3,7 @@ import { HiLocationMarker } from 'react-icons/hi';
 import { FiChevronDown } from 'react-icons/fi';
 export default function HeroSection() {
   return (
-    <div className="section">
+    <section className="section" id="home">
       <header className="mb-4">Hi, I'm Pete</header>
       <span className="flex">
         <h2>A Graduate</h2>
@@ -21,6 +21,6 @@ export default function HeroSection() {
       <button className="bottom-chevron">
         <FiChevronDown className="text-xl text-accent" />
       </button>
-    </div>
+    </section>
   );
 }

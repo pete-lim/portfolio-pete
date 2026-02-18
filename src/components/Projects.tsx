@@ -9,7 +9,7 @@ import { motion } from 'motion/react';
 export default function ProjectSection() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
   return (
-    <div className="section">
+    <section className="section" id="projects">
       <header>Projects</header>
       <div className="embla mt-10 grow" ref={emblaRef}>
         <div className="embla__container cursor-grab">
@@ -92,6 +92,6 @@ export default function ProjectSection() {
           <FiChevronDown className="text-xl text-accent" />
         </motion.button>
       </button>
-    </div>
+    </section>
   );
 }

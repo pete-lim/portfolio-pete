@@ -2,7 +2,7 @@ import { FiChevronDown } from 'react-icons/fi';
 import { motion } from 'motion/react';
 export default function TechStack() {
   return (
-    <div className="section">
+    <section className="section" id="tech">
       <motion.ul initial={{ scale: 0.5 }} whileInView={{ scale: 1 }}>
         <header className="mb-8">Tech Stack</header>
         <div className="flex flex-col w-full gap-5">
@@ -48,6 +48,6 @@ export default function TechStack() {
           <FiChevronDown className="text-xl text-accent" />
         </button>
       </motion.ul>
-    </div>
+    </section>
   );
 }

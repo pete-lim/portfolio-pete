@@ -5,6 +5,8 @@
   --color-accent: #888888;
   --color-bg: #fff;
   --color-bg-accent: #d8d8d8;
+  --color-overlay: #ffffffee;
+  --color-overlay-reverse: #bdbdbd;
 }
 [data-theme='dark-mode'] {
   --color-primary: #e6e6e6;
@@ -12,9 +14,13 @@
   --color-accent: #9a9a9a;
   --color-bg: #1e1e1e;
   --color-bg-accent: #2a2a2a;
+  --color-overlay: #333333;
+  --color-overlay-reverse: #535353;
 }
 html {
   user-select: none;
+  margin: 0;
+  height: 100%;
 }
 header {
   @apply text-7xl tracking-wider text-primary;
@@ -31,13 +37,25 @@ p {
 button {
   @apply text-accent;
 }
-.section {
-  @apply pt-30 h-screen w-8/10 lg:w-5/10 justify-self-center relative;
+
+section {
+  @apply pt-30 min-h-screen max-h-max w-8/10 lg:w-5/10 justify-self-center relative;
+  scroll-snap-align: start;
 }
 .root {
-  scroll-behavior: smooth;
   font-family: 'Inter', sans-serif;
   overflow: hidden;
+}
+main {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+
+main > * {
+  min-height: 100vh;
+  scroll-snap-align: start;
 }
 .bg {
   background: linear-gradient(var(--color-bg), var(--color-bg-accent));
@@ -51,6 +69,10 @@ button {
   @apply absolute bottom-[5%] left-[50%];
 }
 
+.experience-container {
+  @apply rounded-2xl bg-overlay p-6 drop-shadow-lg shadow-overlay-reverse;
+  transition: box-shadow 0.3s ease;
+}
 .li-paragraph {
   @apply text-lg/8 ml-8 mb-4 list-disc;
 }

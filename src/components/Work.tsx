@@ -1,12 +1,37 @@
-import workPhoto from '../assets/images/work-photo.png';
 import { FiChevronDown } from 'react-icons/fi';
+import { motion, useTransform, useScroll } from 'motion/react';
+import { useRef, type ReactNode } from 'react';
+
+type ExperienceCardProps = {
+  children: ReactNode;
+};
+function ExperienceCard({ children }: ExperienceCardProps) {
+  const ref = useRef<HTMLUListElement | null>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start 80%', 'end 20%'],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1, 0.8]);
+  return (
+    <motion.ul
+      ref={ref}
+      whileInView={{ scale: 1 }}
+      style={{ scale }}
+      className="experience-container"
+    >
+      {children}
+    </motion.ul>
+  );
+}
 
 export default function WorkSection() {
   return (
-    <div className="section">
+    <section className="section" id="work">
       <header className="mb-8">Work</header>
-      <div className="h-5/10 flex flex-col gap-8 overflow-hidden overflow-y-auto p-4 scrollbar">
-        <ul>
+      <div className="flex flex-col gap-8 ">
+        <ExperienceCard>
           <span className="flex justify-between">
             <h3 className="text-shadow-xs text-2xl!">
               Software Engineer Intern
@@ -27,44 +52,40 @@ export default function WorkSection() {
             Authored a document procedure for training module used in
             professional settings.
           </li>
-        </ul>
-        <ul className="self-center m-10">--- Soft Experience ---</ul>
-        <ul>
+        </ExperienceCard>
+        <p className="self-center m-10">--- Soft Experience ---</p>
+        <ExperienceCard>
           <span className="flex justify-between">
             <h3 className="text-shadow-xs text-2xl!">Sales Associate</h3>
             <h2>07/24-08/25</h2>
           </span>
           <h2 className="mb-4!">Dyson, Australia</h2>
-        </ul>
-        <ul>
+        </ExperienceCard>
+        <ExperienceCard>
           <span className="flex justify-between">
             <h3 className="text-shadow-xs text-2xl!">Assistant Manager</h3>
             <h2>10/20-08/25</h2>
           </span>
           <h2 className="mb-4!">Dominos, Australia</h2>
-        </ul>
-        <ul>
+        </ExperienceCard>
+        <ExperienceCard>
           <span className="flex justify-between">
             <h3 className="text-shadow-xs text-2xl!">Retail Sales Assistant</h3>
             <h2>06/22-07/24</h2>
           </span>
           <h2 className="mb-4!">JD Sports, Australia</h2>
-        </ul>
-        <ul>
+        </ExperienceCard>
+        <ExperienceCard>
           <span className="flex justify-between">
             <h3 className="text-shadow-xs text-2xl!">Administration</h3>
             <h2>03/20-06/20</h2>
           </span>
           <h2 className="mb-4!">Dyson, Australia</h2>
-        </ul>
+        </ExperienceCard>
       </div>
       <button className="bottom-chevron">
         <FiChevronDown className="text-xl text-accent" />
       </button>
-      <img
-        src={workPhoto}
-        className="mix-blend-darken object-cover absolute bottom-0 left-0"
-      ></img>
-    </div>
+    </section>
   );
 }

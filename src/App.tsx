@@ -15,18 +15,20 @@ function App() {
   return (
     <div className="root">
       <div className="fixed inset-0 -z-10 bg"></div>
-      <span className="fixed w-8/10 justify-self-center h-1/10 flex justify-around bg-bg z-99">
-        <button>Home</button>
-        <button>Tech</button>
-        <button>Work</button>
-        <button>Projects</button>
-        <button>Contact</button>
-      </span>
-      <HeroSection />
-      <TechStack />
-      <WorkSection />
-      <ProjectSection />
-      <ContactSection />
+      <nav className="fixed h-1/10 w-screen items-center flex justify-around bg-bg z-99 text-secondary">
+        <a href="#home">Home</a>
+        <a href="#tech">Tech</a>
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <main>
+        <HeroSection />
+        <TechStack />
+        <WorkSection />
+        <ProjectSection />
+        <ContactSection />
+      </main>
     </div>
   );
 }
