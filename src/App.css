@@ -57,6 +57,7 @@ main > * {
   min-height: 100vh;
   scroll-snap-align: start;
 }
+
 .bg {
   background: linear-gradient(var(--color-bg), var(--color-bg-accent));
   background-attachment: fixed;
@@ -64,6 +65,11 @@ main > * {
 .body {
   align-items: center;
   justify-items: center;
+}
+
+.distort-word {
+  display: inline-block;
+  will-change: transform;
 }
 .bottom-chevron {
   @apply absolute bottom-[5%] left-[50%];
