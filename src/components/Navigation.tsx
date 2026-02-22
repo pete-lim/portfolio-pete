@@ -6,7 +6,10 @@ export default function NavigationBar() {
   return (
     <div>
       <nav
-        className={`fixed w-screen items-center flex bg-bg z-99 text-secondary ${isOpen ? 'h-screen flex-col justify-center gap-12 text-4xl!' : 'h-1/10 justify-around max-lg:hidden'}`}
+        id="banner"
+        className={`lg:flex-row! lg:h-1/12! lg:text-xl! lg:bg-bg! lg:text-accent! ${isOpen ? 'translate-y-0 opacity-100' : 'max-lg:-translate-y-full max-lg:opacity-0'}
+    z-50
+  `}
       >
         <a onClick={() => setOpen(false)} href="#home">
           Home
@@ -24,7 +27,9 @@ export default function NavigationBar() {
           Contact
         </a>
       </nav>
-      <div className="absolute top-8 right-8 text-secondary z-99 lg:hidden">
+      <div
+        className={`absolute top-8 right-8 z-99 lg:hidden ${isOpen ? 'text-bg-accent' : 'text-secondary'}`}
+      >
         <Hamburger toggled={isOpen} toggle={setOpen} />
       </div>
     </div>
