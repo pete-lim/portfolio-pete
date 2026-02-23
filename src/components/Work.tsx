@@ -28,11 +28,11 @@ function ExperienceCard({ children }: ExperienceCardProps) {
 
 export default function WorkSection() {
   return (
-    <section className="section" id="work">
+    <section className="section pb-40" id="work">
       <header className="mb-8">Work</header>
       <div className="flex flex-col gap-8 ">
         <ExperienceCard>
-          <span className="flex justify-between">
+          <span>
             <h3 className="text-shadow-xs text-2xl!">
               Software Engineer Intern
             </h3>
@@ -55,28 +55,28 @@ export default function WorkSection() {
         </ExperienceCard>
         <p className="self-center m-10">--- Soft Experience ---</p>
         <ExperienceCard>
-          <span className="flex justify-between">
+          <span>
             <h3 className="text-shadow-xs text-2xl!">Sales Associate</h3>
             <h2>07/24-08/25</h2>
           </span>
           <h2 className="mb-4!">Dyson, Australia</h2>
         </ExperienceCard>
         <ExperienceCard>
-          <span className="flex justify-between">
+          <span>
             <h3 className="text-shadow-xs text-2xl!">Assistant Manager</h3>
             <h2>10/20-08/25</h2>
           </span>
           <h2 className="mb-4!">Dominos, Australia</h2>
         </ExperienceCard>
         <ExperienceCard>
-          <span className="flex justify-between">
+          <span>
             <h3 className="text-shadow-xs text-2xl!">Retail Sales Assistant</h3>
             <h2>06/22-07/24</h2>
           </span>
           <h2 className="mb-4!">JD Sports, Australia</h2>
         </ExperienceCard>
         <ExperienceCard>
-          <span className="flex justify-between">
+          <span>
             <h3 className="text-shadow-xs text-2xl!">Administration</h3>
             <h2>03/20-06/20</h2>
           </span>

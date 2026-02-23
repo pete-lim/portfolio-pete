@@ -7,8 +7,8 @@ export default function NavigationBar() {
     <div>
       <nav
         id="banner"
-        className={`lg:flex-row! lg:h-1/12! lg:text-xl! lg:bg-bg! lg:text-accent! ${isOpen ? 'translate-y-0 opacity-100' : 'max-lg:-translate-y-full max-lg:opacity-0'}
-    z-50
+        className={`lg:flex-row! lg:h-1/12! lg:text-xl! lg:bg-bg! lg:text-accent! lg:transition-none! ${isOpen ? 'translate-y-0 opacity-100' : 'max-lg:-translate-y-full max-lg:opacity-0'}
+    z-49
   `}
       >
         <a onClick={() => setOpen(false)} href="#home">
@@ -28,7 +28,7 @@ export default function NavigationBar() {
         </a>
       </nav>
       <div
-        className={`absolute top-8 right-8 z-99 lg:hidden ${isOpen ? 'text-bg-accent' : 'text-secondary'}`}
+        className={`absolute top-5 right-8 z-99 lg:hidden ${isOpen ? 'text-bg-accent' : 'text-secondary'}`}
       >
         <Hamburger toggled={isOpen} toggle={setOpen} />
       </div>
