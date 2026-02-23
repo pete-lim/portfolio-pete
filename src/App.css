@@ -90,6 +90,9 @@ body {
   transform: translateY(0);
   transition: all 0.5s ease-in-out;
 }
+#banner a {
+  @apply hover:text-secondary! transition-colors duration-500;
+}
 .distort-word {
   display: inline-block;
   will-change: transform;
@@ -115,10 +118,11 @@ body {
 }
 .embla__container {
   display: flex;
+  align-items: start;
 }
 
 .embla__slide {
-  flex: 0 0 100%;
+  flex: 0 0 95% !important;
   min-width: 0;
 }
 .project-thumbnail {
@@ -129,4 +133,8 @@ body {
 }
 .project-text {
   @apply text-xl!;
+}
+
+#icon {
+  @apply hover:text-indigo-600 transition-colors duration-300;
 }

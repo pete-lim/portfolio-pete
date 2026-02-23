@@ -30,7 +30,7 @@ export default function ProjectSection() {
                   whileTap={{ scale: 0.95 }}
                   onHoverStart={() => console.log('hover started!')}
                 >
-                  <FaGithubSquare />{' '}
+                  <FaGithubSquare id="icon" />{' '}
                 </motion.button>
               </a>
             </span>

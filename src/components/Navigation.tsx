@@ -28,7 +28,7 @@ export default function NavigationBar() {
         </a>
       </nav>
       <div
-        className={`absolute top-5 right-8 z-99 lg:hidden ${isOpen ? 'text-bg-accent' : 'text-secondary'}`}
+        className={`absolute top-5 right-8 z-99 hover:text-primary lg:hidden ${isOpen ? 'text-bg-accent' : 'text-secondary'}`}
       >
         <Hamburger toggled={isOpen} toggle={setOpen} />
       </div>

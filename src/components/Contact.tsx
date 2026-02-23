@@ -37,7 +37,7 @@ export default function ContactSection() {
           target="_blank"
           className="flex flex-col items-center gap-2"
         >
-          <FaGithubSquare />
+          <FaGithubSquare id="icon" />
           <p>GitHub</p>
         </a>
         <a
@@ -46,7 +46,7 @@ export default function ContactSection() {
           target="_blank"
           className="flex flex-col items-center gap-2"
         >
-          <FaLinkedin />
+          <FaLinkedin id="icon" />
           <p>LinkedIn</p>
         </a>
       </span>
