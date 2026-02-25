@@ -39,7 +39,7 @@ button {
 }
 
 section {
-  @apply pt-30 min-h-screen max-h-max w-8/10 lg:w-5/10 justify-self-center relative;
+  @apply flex flex-col min-h-screen max-h-max w-8/10 lg:w-5/10 justify-self-center justify-center relative;
   scroll-snap-align: start;
 }
 .root {
@@ -137,4 +137,20 @@ body {
 
 #icon {
   @apply hover:text-indigo-600 transition-colors duration-300;
+}
+
+.hero-parallax {
+  background-image:
+    linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+    url('/src/assets/images/hero-photo.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+#home {
+  @apply lg:w-screen;
+}
+.parallax-text {
+  @apply text-white!;
 }

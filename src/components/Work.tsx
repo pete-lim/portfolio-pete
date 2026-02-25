@@ -28,7 +28,7 @@ function ExperienceCard({ children }: ExperienceCardProps) {
 
 export default function WorkSection() {
   return (
-    <section className="section pb-40" id="work">
+    <section className="section py-40" id="work">
       <header className="mb-8">Work</header>
       <div className="flex flex-col gap-8 ">
         <ExperienceCard>
@@ -83,9 +83,6 @@ export default function WorkSection() {
           <h2 className="mb-4!">Dyson, Australia</h2>
         </ExperienceCard>
       </div>
-      <button className="bottom-chevron">
-        <FiChevronDown className="text-xl text-accent" />
-      </button>
     </section>
   );
 }

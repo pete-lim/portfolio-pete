@@ -44,9 +44,6 @@ export default function TechStack() {
             </span>
           </div>
         </div>
-        <button className="bottom-chevron">
-          <FiChevronDown className="text-xl text-accent" />
-        </button>
       </motion.ul>
     </section>
   );

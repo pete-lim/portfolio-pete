@@ -1,6 +1,5 @@
-import heroPhoto from '../assets/images/hero-photo.png';
+import heroPhoto from '../assets/images/hero-photo.jpg';
 import { HiLocationMarker } from 'react-icons/hi';
-import { FiChevronDown } from 'react-icons/fi';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import type { ElementType, ReactNode } from 'react';
 
@@ -26,7 +25,7 @@ function DistortText({ children, tag = 'h2', className = '' }: prop) {
   const MotionTag = motion[tag as allowedTags];
   return (
     <MotionTag
-      className={`distort-word ${className}`}
+      className={`distort-word lg:text-shadow-black lg:text-shadow-2xs  ${className}`}
       onMouseMove={onMove}
       onMouseLeave={() => {
         x.set(0);
@@ -41,32 +40,41 @@ function DistortText({ children, tag = 'h2', className = '' }: prop) {
 
 export default function HeroSection() {
   return (
-    <section className="section" id="home">
-      <span className="flex gap-2 mb-4">
-        <DistortText tag="header">Hi,</DistortText>
-        <DistortText tag="header">I'm</DistortText>
-        <DistortText tag="header">Pete</DistortText>
-      </span>
-      <span className="flex gap-4">
-        <DistortText>A</DistortText>
-        <DistortText>Graduate</DistortText>
-        <DistortText tag="h3">Software</DistortText>
-        <DistortText tag="h3">Engineer,</DistortText>
-      </span>
-      <span className="flex items-center gap-4">
-        <DistortText>South</DistortText>
-        <DistortText>Australia,</DistortText>
-        <DistortText>Adelaide</DistortText>
-        <HiLocationMarker className="ml-1 text-red-500" />
-      </span>
-      <img
-        src={heroPhoto}
-        alt=""
-        className="mix-blend-darken mt-10 w-full h-5/10 object-cover"
-      />
-      <button className="bottom-chevron">
-        <FiChevronDown className="text-xl text-accent" />
-      </button>
+    <section className={`section h-screen`} id="home">
+      <div className="hero-parallax max-lg:bg-none! lg:flex flex-col lg:h-8/12 items-center justify-center">
+        <span className="flex gap-2 mb-4">
+          <DistortText tag="header" className="lg:text-9xl! lg:text-white!">
+            Hi,
+          </DistortText>
+          <DistortText tag="header" className="lg:text-9xl! lg:text-white!">
+            I'm
+          </DistortText>
+          <DistortText tag="header" className="lg:text-9xl! lg:text-white!">
+            Pete
+          </DistortText>
+        </span>
+        <span className="flex gap-4">
+          <DistortText className="lg:text-gray-200!">A</DistortText>
+          <DistortText className="lg:text-gray-200!">Graduate</DistortText>
+          <DistortText className="lg:text-white!" tag="h3">
+            Software
+          </DistortText>
+          <DistortText tag="h3" className="lg:text-white!">
+            Engineer,
+          </DistortText>
+        </span>
+        <span className="flex items-center gap-4">
+          <DistortText className="lg:text-gray-200!">South</DistortText>
+          <DistortText className="lg:text-gray-200!">Australia,</DistortText>
+          <DistortText className="lg:text-gray-200!">Adelaide</DistortText>
+          <HiLocationMarker className="ml-1 text-red-500" />
+        </span>
+        <img
+          src={heroPhoto}
+          alt=""
+          className="lg:hidden mt-10 w-full h-5/10 object-cover"
+        />
+      </div>
     </section>
   );
 }

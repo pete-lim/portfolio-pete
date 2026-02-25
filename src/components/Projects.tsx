@@ -9,7 +9,7 @@ import { motion } from 'motion/react';
 export default function ProjectSection() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
   return (
-    <section className="section" id="projects">
+    <section className="section pt-30" id="projects">
       <header>Projects</header>
       <div className="embla mt-10 grow" ref={emblaRef}>
         <div className="embla__container cursor-grab">
@@ -83,15 +83,6 @@ export default function ProjectSection() {
           </div>
         </div>
       </div>
-      <button className="bottom-chevron">
-        <motion.button
-          whileHover={{ scale: 1.4 }}
-          whileTap={{ scale: 1 }}
-          onHoverStart={() => console.log('hover started!')}
-        >
-          <FiChevronDown className="text-xl text-accent" />
-        </motion.button>
-      </button>
     </section>
   );
 }
