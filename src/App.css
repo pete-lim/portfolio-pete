@@ -7,6 +7,7 @@
   --color-bg-accent: #d8d8d8;
   --color-overlay: #ffffffee;
   --color-overlay-reverse: #bdbdbd;
+  --color-tint: #a85a4a;
 }
 [data-theme='dark-mode'] {
   --color-primary: #e6e6e6;
@@ -16,11 +17,13 @@
   --color-bg-accent: #2a2a2a;
   --color-overlay: #333333;
   --color-overlay-reverse: #535353;
+  --color-tint: #a85a4a;
 }
 html {
   user-select: none;
   margin: 0;
   height: 100%;
+  overflow: hidden;
 }
 header {
   @apply text-7xl tracking-wider text-primary;
@@ -97,10 +100,16 @@ body {
   display: inline-block;
   will-change: transform;
 }
-.bottom-chevron {
-  @apply absolute bottom-[5%] left-[50%];
-}
 
+.skill-tag {
+  @apply transition-shadow flex gap-2 h-7 border-2 border-accent shadow-2xl shadow-overlay-reverse rounded-2xl p-6 items-center;
+}
+.skill-tag:hover {
+  @apply duration-300 ease-in-out shadow-primary shadow-xs;
+}
+.tech-icon {
+  @apply size-8;
+}
 .experience-container {
   @apply rounded-2xl bg-overlay p-6 drop-shadow-lg shadow-overlay-reverse;
   transition: box-shadow 0.3s ease;
@@ -122,8 +131,10 @@ body {
 }
 
 .embla__slide {
-  flex: 0 0 95% !important;
+  flex: 0 0 85% !important;
   min-width: 0;
+  height: 100%;
+  @apply px-4 text-primary flex flex-col h-full justify-between gap-4;
 }
 .project-thumbnail {
   width: 100%;
@@ -136,17 +147,18 @@ body {
 }
 
 #icon {
-  @apply hover:text-indigo-600 transition-colors duration-300;
+  @apply hover:text-tint transition-colors duration-300;
 }
 
 .hero-parallax {
   background-image:
     linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
-    url('/src/assets/images/hero-photo.jpg');
+    url('/src/assets/images/hero-photo.webp');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  @apply lg:w-240;
 }
 #home {
   @apply lg:w-screen;

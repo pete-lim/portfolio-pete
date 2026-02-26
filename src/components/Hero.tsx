@@ -1,4 +1,4 @@
-import heroPhoto from '../assets/images/hero-photo.jpg';
+import heroPhoto from '../assets/images/hero-photo.webp';
 import { HiLocationMarker } from 'react-icons/hi';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import type { ElementType, ReactNode } from 'react';
@@ -40,9 +40,9 @@ function DistortText({ children, tag = 'h2', className = '' }: prop) {
 
 export default function HeroSection() {
   return (
-    <section className={`section h-screen`} id="home">
+    <section className={`section h-screen lg:items-center`} id="home">
       <div className="hero-parallax max-lg:bg-none! lg:flex flex-col lg:h-8/12 items-center justify-center">
-        <span className="flex gap-2 mb-4">
+        <span className="flex gap-2 lg:mt-30 mb-4">
           <DistortText tag="header" className="lg:text-9xl! lg:text-white!">
             Hi,
           </DistortText>
@@ -67,8 +67,11 @@ export default function HeroSection() {
           <DistortText className="lg:text-gray-200!">South</DistortText>
           <DistortText className="lg:text-gray-200!">Australia,</DistortText>
           <DistortText className="lg:text-gray-200!">Adelaide</DistortText>
-          <HiLocationMarker className="ml-1 text-red-500" />
+          <DistortText>
+            <HiLocationMarker className="ml-1 text-red-500" />
+          </DistortText>
         </span>
+
         <img
           src={heroPhoto}
           alt=""
