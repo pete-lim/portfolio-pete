@@ -1,8 +1,10 @@
+import { FaExternalLinkAlt } from 'react-icons/fa';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
-import sortedBeans from '../assets/images/sorted-beans-thumbnail.svg';
-import bullDog from '../assets/images/bulldog-thumbnail.svg';
-import vuePlatform from '../assets/images/vue-platform-thumbnail.svg';
+import sortedBeans from '../assets/images/sorted-beans-thumbnail.webp';
+import bullDog from '../assets/images/bulldog-thumbnail.webp';
+import vuePlatform from '../assets/images/vue-platform-thumbnail.webp';
+import learn4Less from '../assets/images/learn4less-thumbnail.webp';
 import { FaGithubSquare } from 'react-icons/fa';
 import { motion } from 'motion/react';
 export default function ProjectSection() {
@@ -18,8 +20,17 @@ export default function ProjectSection() {
                 <h3>Sorted Beans</h3> <h2>- Personal</h2>
               </div>
             </span>
-            <a href="https://sorted-beans.netlify.app/" target="_blank">
-              <img src={sortedBeans} alt="" className="project-thumbnail" />
+            <a
+              href="https://sorted-beans.netlify.app/"
+              target="_blank"
+              className="bg-black rounded-2xl relative text-transparent hover:text-white"
+            >
+              <img
+                src={sortedBeans}
+                alt="sorted-beans project thumbnail"
+                className="project-thumbnail hover:opacity-40 transition-opacity duration-300"
+              />
+              <FaExternalLinkAlt className="absolute inset-1/2" />
             </a>
             <h3 className="project-text">
               Minimalist productivity-focused day planner with real-time
@@ -52,7 +63,7 @@ export default function ProjectSection() {
               <h3>Vue Platform</h3>
               <h2> - Vue Reality Labs</h2>
             </span>
-            <img src={vuePlatform} alt="" className="project-thumbnail" />
+            <img src={vuePlatform} alt="" className="project-thumbnail " />
             <h3 className="project-text">
               Immersive Media Streaming Prototype built with a full
               client–server architecture, featuring secure authentication,
@@ -79,6 +90,45 @@ export default function ProjectSection() {
               Unity, C#, OpenXR, Hand Tracking APIs, UI/UX for XR, Blender,
               Photogrammetry, VR Performance Profiling, Interaction Systems
             </h2>
+          </div>
+          <div className="embla__slide ">
+            <span className="flex max-md:flex-col md:items-end gap-2">
+              <h3>Learn 4 Less</h3>
+              <h2> - Personal</h2>
+            </span>
+            <a
+              href="https://pete-lim.github.io/Learn4Less/code/index.html"
+              target="_blank"
+              className="bg-black rounded-2xl relative text-transparent hover:text-white"
+            >
+              <img
+                src={learn4Less}
+                alt="learn4less project thumbnail"
+                className="project-thumbnail hover:opacity-40 transition-opacity duration-300"
+              />
+              <FaExternalLinkAlt className="absolute inset-1/2" />
+            </a>
+            <h3 className="project-text">
+              Learn4Less is a Tutoring Platform for Australian students to be
+              tutored by postgrad or grad students. An early static site for
+              Front End development and experience
+            </h3>
+            <h2 className="text-base/7!">HTML5, JS, CSS, UI/UX</h2>
+            <a
+              href="https://github.com/pete-lim/portfolio-pete"
+              aria-label="GitHub Repo link"
+              target="_blank"
+              className="text-3xl"
+            >
+              <motion.button
+                initial={{ scale: 0.8 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                onHoverStart={() => console.log('hover started!')}
+              >
+                <FaGithubSquare id="icon" />{' '}
+              </motion.button>
+            </a>
           </div>
         </div>
       </div>

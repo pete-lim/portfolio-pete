@@ -1,4 +1,4 @@
-import photo from '../assets/images/contact-photo.png';
+import photo from '../assets/images/contact-photo.webp';
 import resume from '../assets/images/Pete-Lim-Software-Engineer-CV.webp';
 export default function ContactSection() {
   return (
@@ -29,8 +29,8 @@ export default function ContactSection() {
 
       <img
         src={photo}
-        alt=""
-        className="self-end mix-blend-multiply size-3/4 object-contain"
+        alt="two dawgs"
+        className=" self-center size-2/4 object-contain"
       />
     </section>
   );
