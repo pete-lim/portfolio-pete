@@ -40,16 +40,16 @@ export default function WorkSection() {
           </span>
           <h2 className="mb-4!">Vue Reality Labs, Singapore</h2>
           <li className="li-paragraph">
-            Designed client-server system architecture for a VR platform
+            Designed client-server system architecture for an XR platform
             supporting microservices, 3-tier scaling and 10+ user flows.
           </li>
           <li className="li-paragraph">
-            Pioneered a Virtual Reality (VR) game with 11+ interactable
-            mechanics and optimised for VR performance deployed in healthcare
+            Pioneered a VR game with 11+ interactable mechanics and optimised
+            for performance and unit testing deployed in healthcare
             institutions.
           </li>
           <li className="li-paragraph">
-            Authored a document procedure for training module used in
+            Authored a document protocol for training module used in
             professional settings.
           </li>
         </ExperienceCard>

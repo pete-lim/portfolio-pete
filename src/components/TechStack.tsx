@@ -40,7 +40,7 @@ export default function TechStack() {
                       loading="lazy"
                     />
                   )}
-                  <h3>{item.name}</h3>
+                  <h3 className="tech-tag-text">{item.name}</h3>
                 </div>
               ))}
             </span>
@@ -59,7 +59,7 @@ export default function TechStack() {
                     alt={item.name}
                     loading="lazy"
                   />
-                  <h3>{item.name}</h3>
+                  <h3 className="tech-tag-text">{item.name}</h3>
                 </div>
               ))}
             </span>
@@ -81,7 +81,7 @@ export default function TechStack() {
                     alt={item.name}
                     loading="lazy"
                   />
-                  <h3>{item.name}</h3>
+                  <h3 className="tech-tag-text">{item.name}</h3>
                 </div>
               ))}
             </span>
@@ -104,7 +104,7 @@ export default function TechStack() {
                       loading="lazy"
                     />
                   )}
-                  <h3>{item.name}</h3>
+                  <h3 className="tech-tag-text">{item.name}</h3>
                 </div>
               ))}
             </span>

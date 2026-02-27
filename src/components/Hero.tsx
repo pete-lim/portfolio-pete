@@ -40,9 +40,9 @@ function DistortText({ children, tag = 'h2', className = '' }: prop) {
 
 export default function HeroSection() {
   return (
-    <section className={`section h-screen lg:items-center`} id="home">
-      <div className="hero-parallax max-lg:bg-none! lg:flex flex-col lg:h-8/12 items-center justify-center">
-        <span className="flex gap-2 lg:mt-30 mb-4">
+    <section className={`section lg:h-screen lg:items-center`} id="home">
+      <div className="hero-parallax max-lg:bg-none! lg:mb-8 lg:flex flex-col lg:h-7/12 items-center ">
+        <span className="flex gap-2 lg:mt-60 mb-4">
           <DistortText tag="header" className="lg:text-9xl! lg:text-white!">
             Hi,
           </DistortText>
@@ -55,7 +55,6 @@ export default function HeroSection() {
         </span>
         <span className="flex gap-4">
           <DistortText className="lg:text-gray-200!">A</DistortText>
-          <DistortText className="lg:text-gray-200!">Graduate</DistortText>
           <DistortText className="lg:text-white!" tag="h3">
             Software
           </DistortText>
@@ -74,10 +73,16 @@ export default function HeroSection() {
 
         <img
           src={heroPhoto}
-          alt=""
-          className="lg:hidden mt-10 w-full h-5/10 object-cover"
+          alt="photo of me and my dogs"
+          className="lg:hidden my-10 w-full h-90 object-cover"
         />
       </div>
+      <p className="lg:w-7/10 text-primary!">
+        A Flinders University, Bachelor of Computer Science Graduate, with a
+        2025 New Colombo Plan Scholarship and completed an international
+        internship in Singapore, developing scalable Full-Stack systems and
+        application for healthcare industries.
+      </p>
     </section>
   );
 }
