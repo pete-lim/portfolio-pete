@@ -1,4 +1,3 @@
-import { FiChevronDown } from 'react-icons/fi';
 import { motion, useTransform, useScroll } from 'motion/react';
 import { useRef, type ReactNode } from 'react';
 
