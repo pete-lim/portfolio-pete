@@ -28,7 +28,6 @@ export default function TechStack() {
                 { icon: javaIcon, name: 'Java' },
                 { icon: javaScriptIcon, name: 'JavaScript' },
                 { icon: typeScriptIcon, name: 'TypeScript' },
-                { icon: tailwindIcon, name: 'TailwindCSS' },
                 { icon: html5Icon, name: 'HTML 5' },
               ].map((item) => (
                 <div className="skill-tag" key={item.name}>
@@ -50,6 +49,7 @@ export default function TechStack() {
             <span className="mt-4 w-full gap-5 flex flex-wrap">
               {[
                 { icon: reactIcon, name: 'React' },
+                { icon: tailwindIcon, name: 'TailwindCSS' },
                 { icon: unityIcon, name: 'Unity' },
               ].map((item) => (
                 <div className="skill-tag" key={item.name}>

@@ -26,23 +26,23 @@ html {
   overflow: hidden;
 }
 header {
-  @apply text-7xl tracking-wider text-primary;
+  @apply text-5xl sm:text-7xl tracking-wider text-primary;
 }
 h2 {
-  @apply text-2xl text-accent;
+  @apply text-xl sm:text-2xl text-accent;
 }
 h3 {
-  @apply text-2xl text-primary;
+  @apply text-xl sm:text-2xl text-primary;
 }
 p {
-  @apply text-lg text-accent;
+  @apply sm:text-lg text-accent;
 }
 button {
   @apply text-accent;
 }
 
 section {
-  @apply flex flex-col min-h-screen max-h-max w-8/10 lg:w-7/10 xl:w-5/10 justify-self-center justify-center relative;
+  @apply flex flex-col min-h-screen max-h-max w-5/10 sm:w-8/10 lg:w-7/10 xl:w-5/10 justify-self-center justify-center relative;
   scroll-snap-align: start;
 }
 .root {
@@ -102,7 +102,7 @@ body {
 }
 
 .skill-tag {
-  @apply transition-shadow flex gap-2 h-7 border-2 border-accent shadow-2xl shadow-overlay-reverse rounded-2xl p-6 items-center;
+  @apply transition-shadow flex gap-2 h-7 border-2 border-accent shadow-2xl shadow-overlay-reverse rounded-2xl p-4 sm:p-6 items-center;
 }
 .skill-tag:hover {
   @apply duration-300 ease-in-out shadow-primary shadow-xs;
@@ -118,7 +118,7 @@ body {
   transition: box-shadow 0.3s ease;
 }
 .li-paragraph {
-  @apply text-primary text-lg/8 ml-8 mb-4 list-disc;
+  @apply text-primary text-base/8 sm:text-lg/8 ml-8 mb-4 list-disc;
 }
 .scrollbar {
   scrollbar-color: var(--color-bg) var(--color-secondary);
@@ -146,7 +146,7 @@ body {
   @apply shadow-xl;
 }
 .project-text {
-  @apply text-xl!;
+  @apply text-lg! sm:text-xl!;
 }
 
 #icon {
@@ -168,4 +168,13 @@ body {
 }
 .parallax-text {
   @apply text-white!;
+}
+
+.contact-grid {
+  @apply grid grid-cols-2 gap-2 w-80 h-100;
+  background-image: url('/src/assets/images/contact-photo.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
 }

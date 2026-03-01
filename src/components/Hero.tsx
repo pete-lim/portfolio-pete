@@ -42,7 +42,7 @@ export default function HeroSection() {
   return (
     <section className={`section lg:h-screen lg:items-center`} id="home">
       <div className="hero-parallax max-lg:bg-none! lg:mb-8 lg:flex flex-col lg:h-7/12 items-center ">
-        <span className="flex gap-2 lg:mt-60 mb-4">
+        <span className="flex gap-2 lg:mt-80 mb-4">
           <DistortText tag="header" className="lg:text-9xl! lg:text-white!">
             Hi,
           </DistortText>
@@ -77,7 +77,7 @@ export default function HeroSection() {
           className="lg:hidden my-10 w-full h-90 object-cover"
         />
       </div>
-      <p className="lg:w-7/10 text-primary!">
+      <p className="lg:w-7/10 xl:w-5/10 text-primary!">
         A Flinders University, Bachelor of Computer Science Graduate, with a
         2025 New Colombo Plan Scholarship and completed an international
         internship in Singapore, developing scalable Full-Stack systems and
