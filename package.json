@@ -1,7 +1,4 @@
 {
-  "homepage": "https://pete-lim.github.io/portfolio-pete",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist",
   "private": true,
   "version": "0.0.0",
   "type": "module",
