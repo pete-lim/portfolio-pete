@@ -1,7 +1,8 @@
 import heroPhoto from '../assets/images/hero-photo.webp';
+import jdawgReminds from '../assets/images/jdawg-reminds.webp';
 import { HiLocationMarker } from 'react-icons/hi';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
-import type { ElementType, ReactNode } from 'react';
+import { useEffect, useState, type ElementType, type ReactNode } from 'react';
 
 type prop = {
   children: ReactNode;
@@ -39,10 +40,23 @@ function DistortText({ children, tag = 'h2', className = '' }: prop) {
 }
 
 export default function HeroSection() {
+  const [zoomLevel, setZoomLevel] = useState(
+    Math.round((window.outerWidth / window.innerWidth) * 100),
+  );
+  const handleResize = () => {
+    const level = Math.round((window.outerWidth / window.innerWidth) * 100);
+    setZoomLevel(level);
+  };
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   return (
     <section className={`section lg:h-screen lg:items-center`} id="home">
       <div className="hero-parallax max-lg:bg-none! lg:mb-8 lg:flex flex-col lg:h-7/12 items-center ">
-        <span className="flex gap-2 lg:mt-80 mb-4">
+        <span
+          className={`flex gap-2 ${zoomLevel == 100 ? 'lg:mt-80' : 'lg:mt-60'} mb-4 `}
+        >
           <DistortText tag="header" className="lg:text-9xl! lg:text-white!">
             Hi,
           </DistortText>
@@ -83,6 +97,17 @@ export default function HeroSection() {
         internship in Singapore, developing scalable Full-Stack systems and
         application for healthcare industries.
       </p>
+      <div
+        className={`${zoomLevel <= 125 ? 'opacity-0' : 'opacity-100'} absolute transition-opacity duration-300 top-0 left-0 w-screen h-screen z-50 flex flex-col backdrop-blur-2xl items-center justify-center`}
+      >
+        <p className="text-white! mix-blend-difference">
+          Ruff! Set zoom to 100%
+        </p>
+        <img src={jdawgReminds} alt="" />
+        <p className="text-black! mix-blend-difference">
+          Ruff! Set zoom to 100%
+        </p>
+      </div>
     </section>
   );
 }
