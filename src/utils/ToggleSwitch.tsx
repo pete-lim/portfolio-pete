@@ -9,6 +9,7 @@ interface Props {
 export default function FancyToggle({ isDark, setIsDark }: Props) {
   return (
     <button
+      aria-label="Dark Light Mode Toggle"
       onClick={() => setIsDark(!isDark)}
       className={`absolute top-8 lg:top-7 lg:right-8 max-lg:left-8 cursor-pointer z-50 w-14 h-7 
       rounded-full p-1 flex items-center

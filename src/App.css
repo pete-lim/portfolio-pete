@@ -156,7 +156,7 @@ body {
 .hero-parallax {
   background-image:
     linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
-    url('/src/assets/images/hero-photo.webp');
+    url('/src/assets/images/hero-photo-downscale.webp');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

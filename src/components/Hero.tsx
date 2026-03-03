@@ -1,6 +1,6 @@
-import heroPhoto from '../assets/images/hero-photo.webp';
+import { FaMapMarkerAlt } from 'react-icons/fa';
+import heroPhoto from '../assets/images/hero-photo-downscale.webp';
 import jdawgReminds from '../assets/images/jdawg-reminds.webp';
-import { HiLocationMarker } from 'react-icons/hi';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { useEffect, useState, type ElementType, type ReactNode } from 'react';
 
@@ -81,11 +81,12 @@ export default function HeroSection() {
           <DistortText className="lg:text-gray-200!">Australia,</DistortText>
           <DistortText className="lg:text-gray-200!">Adelaide</DistortText>
           <DistortText>
-            <HiLocationMarker className="ml-1 text-red-500" />
+            <FaMapMarkerAlt className="ml-1 text-red-500" />
           </DistortText>
         </span>
 
         <img
+          fetchPriority="high"
           src={heroPhoto}
           alt="photo of me and my dogs"
           className="lg:hidden my-10 w-full h-90 object-cover"
@@ -98,7 +99,7 @@ export default function HeroSection() {
         application for healthcare industries.
       </p>
       <div
-        className={`${zoomLevel <= 125 ? 'opacity-0' : 'opacity-100'} absolute transition-opacity duration-300 top-0 left-0 w-screen h-screen z-50 flex flex-col backdrop-blur-2xl items-center justify-center`}
+        className={`${zoomLevel <= 125 ? 'hidden opacity-0' : ' opacity-100'}  absolute transition-opacity duration-300 top-0 left-0 w-screen h-screen z-50 flex flex-col backdrop-blur-2xl items-center justify-center`}
       >
         <p className="text-white! mix-blend-difference">
           Ruff! Set zoom to 100%

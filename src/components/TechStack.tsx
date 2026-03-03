@@ -17,7 +17,7 @@ import unityIcon from '../assets/icons/unityIcon.svg';
 export default function TechStack() {
   return (
     <section className="section" id="tech">
-      <motion.ul initial={{ scale: 0.5 }} whileInView={{ scale: 1 }}>
+      <motion.div initial={{ scale: 0.5 }} whileInView={{ scale: 1 }}>
         <header className="mb-8">Tech Stack</header>
         <div className="flex flex-col w-full gap-5">
           <div className="w-full">
@@ -110,7 +110,7 @@ export default function TechStack() {
             </span>
           </div>
         </div>
-      </motion.ul>
+      </motion.div>
     </section>
   );
 }

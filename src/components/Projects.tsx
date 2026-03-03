@@ -1,12 +1,12 @@
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithubSquare } from 'react-icons/fa';
+import { motion } from 'motion/react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import sortedBeans from '../assets/images/sorted-beans-thumbnail.webp';
 import bullDog from '../assets/images/bulldog-thumbnail.webp';
 import vuePlatform from '../assets/images/vue-platform-thumbnail.webp';
 import learn4Less from '../assets/images/learn4less-thumbnail.webp';
-import { FaGithubSquare } from 'react-icons/fa';
-import { motion } from 'motion/react';
 export default function ProjectSection() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
   return (
@@ -27,6 +27,7 @@ export default function ProjectSection() {
             >
               <img
                 src={sortedBeans}
+                loading="lazy"
                 alt="sorted-beans project thumbnail"
                 className="project-thumbnail hover:opacity-40 transition-opacity duration-300"
               />
@@ -63,7 +64,12 @@ export default function ProjectSection() {
               <h3>Vue Platform</h3>
               <h2> - Vue Reality Labs</h2>
             </span>
-            <img src={vuePlatform} alt="" className="project-thumbnail " />
+            <img
+              src={vuePlatform}
+              loading="lazy"
+              alt=""
+              className="project-thumbnail "
+            />
             <h3 className="project-text">
               Immersive Media Streaming Prototype built with a full
               client–server architecture, featuring secure authentication,
@@ -79,7 +85,12 @@ export default function ProjectSection() {
               <h3>BullDog Cafe</h3>
               <h2> - Vue Reality Labs</h2>
             </span>
-            <img src={bullDog} alt="" className="project-thumbnail" />
+            <img
+              src={bullDog}
+              loading="lazy"
+              alt=""
+              className="project-thumbnail"
+            />
             <h3 className="project-text">
               Cross-headset VR cognitive stimulation game featuring fully
               interactive hand-tracking mechanics, optimised XR-ready 3D asset
@@ -104,6 +115,7 @@ export default function ProjectSection() {
               <img
                 src={learn4Less}
                 alt="learn4less project thumbnail"
+                loading="lazy"
                 className="project-thumbnail hover:opacity-40 transition-opacity duration-300"
               />
               <FaExternalLinkAlt className="absolute inset-1/2" />

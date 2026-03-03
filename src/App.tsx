@@ -1,14 +1,18 @@
-import { useEffect, useState } from 'react';
+import { lazy, useEffect, useState } from 'react';
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
 import '@fontsource/inter/400.css';
 import './App.css';
+
+import LazySection from './utils/LazySection';
+
 import NavigationBar from './components/Navigation';
 import FancyToggle from './utils/ToggleSwitch';
 import HeroSection from './components/Hero';
-import TechStack from './components/TechStack';
-import WorkSection from './components/Work';
-import ProjectSection from './components/Projects';
-import ContactSection from './components/Contact';
+const TechStack = lazy(() => import('./components/TechStack'));
+const WorkSection = lazy(() => import('./components/Work'));
+const ProjectSection = lazy(() => import('./components/Projects'));
+const ContactSection = lazy(() => import('./components/Contact'));
+
 function App() {
   const [isDark, setIsDark] = useState(false);
   useEffect(() => {
@@ -38,10 +42,18 @@ function App() {
       </span>
       <main>
         <HeroSection />
-        <TechStack />
-        <WorkSection />
-        <ProjectSection />
-        <ContactSection />
+        <LazySection>
+          <TechStack />
+        </LazySection>
+        <LazySection>
+          <WorkSection />
+        </LazySection>
+        <LazySection>
+          <ProjectSection />
+        </LazySection>
+        <LazySection>
+          <ContactSection />
+        </LazySection>
       </main>
     </div>
   );
