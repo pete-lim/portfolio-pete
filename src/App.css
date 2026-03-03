@@ -42,8 +42,13 @@ button {
 }
 
 section {
-  @apply flex flex-col min-h-screen max-h-max w-5/10 sm:w-8/10 lg:w-7/10 xl:w-5/10 justify-self-center justify-center relative;
+  @apply flex flex-col min-h-screen max-w-screen max-h-max w-11/12 sm:w-8/10 lg:w-7/10 xl:w-5/10 justify-self-center justify-center relative;
   scroll-snap-align: start;
+}
+@media screen and (max-height: 800px) {
+  #home {
+    @apply py-30;
+  }
 }
 .root {
   font-family: 'Inter', sans-serif;
@@ -52,6 +57,7 @@ section {
 main {
   height: 100vh;
   overflow-y: auto;
+  overflow-x: hidden;
   scroll-snap-type: y proximity;
   scroll-behavior: smooth;
 }

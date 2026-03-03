@@ -40,10 +40,15 @@ function DistortText({ children, tag = 'h2', className = '' }: prop) {
 }
 
 export default function HeroSection() {
-  const [zoomLevel, setZoomLevel] = useState(
-    Math.round((window.outerWidth / window.innerWidth) * 100),
-  );
+  const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+  const isSmallScreen = window.matchMedia('(max-width: 767px)').matches;
+
+  const [zoomLevel, setZoomLevel] = useState(100);
   const handleResize = () => {
+    if (isTouchDevice || isSmallScreen) {
+      setZoomLevel(100);
+      return;
+    }
     const level = Math.round((window.outerWidth / window.innerWidth) * 100);
     setZoomLevel(level);
   };
@@ -99,7 +104,7 @@ export default function HeroSection() {
         application for healthcare industries.
       </p>
       <div
-        className={`${zoomLevel <= 125 ? 'hidden opacity-0' : ' opacity-100'}  absolute transition-opacity duration-300 top-0 left-0 w-screen h-screen z-50 flex flex-col backdrop-blur-2xl items-center justify-center`}
+        className={`${zoomLevel <= 125 ? 'hidden opacity-0' : 'opacity-100'}  absolute transition-opacity duration-300 top-0 left-0 w-screen h-screen z-50 flex flex-col backdrop-blur-2xl items-center justify-center`}
       >
         <p className="text-white! mix-blend-difference">
           Ruff! Set zoom to 100%
