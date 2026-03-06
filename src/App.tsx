@@ -2,7 +2,7 @@ import { lazy, useEffect, useState } from 'react';
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
 import '@fontsource/inter/400.css';
 import './App.css';
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from '@vercel/analytics/react';
 
 import LazySection from './utils/LazySection';
 import NavigationBar from './components/Navigation';
