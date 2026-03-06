@@ -2,9 +2,9 @@ import { lazy, useEffect, useState } from 'react';
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
 import '@fontsource/inter/400.css';
 import './App.css';
+import { Analytics } from '@vercel/analytics/next';
 
 import LazySection from './utils/LazySection';
-
 import NavigationBar from './components/Navigation';
 import FancyToggle from './utils/ToggleSwitch';
 import HeroSection from './components/Hero';
@@ -21,6 +21,7 @@ function App() {
   }, [isDark]);
   return (
     <div className="root">
+      <Analytics />
       <div className="fixed inset-0 -z-10 bg"></div>
       <NavigationBar />
       <FancyToggle isDark={isDark} setIsDark={setIsDark} />
