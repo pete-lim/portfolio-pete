@@ -60,7 +60,7 @@ export default function HeroSection() {
     <section className={`section lg:h-screen lg:items-center`} id="home">
       <div className="hero-parallax max-lg:bg-none! lg:mb-8 lg:flex flex-col lg:h-7/12 items-center ">
         <span
-          className={`flex gap-2 ${zoomLevel > 100 ? 'lg:mt-60' : 'lg:mt-80'} mb-4 `}
+          className={`flex gap-2 ${zoomLevel > 100 ? 'lg:mt-60' : 'main-title'} mb-4 `}
         >
           <DistortText tag="header" className="lg:text-9xl! lg:text-white!">
             Hi,

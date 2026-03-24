@@ -50,6 +50,24 @@ section {
     @apply py-30;
   }
 }
+@media (width >= 64rem /* 1024px */) and (min-height: 900px) {
+  .main-title {
+    margin-top: calc(var(--spacing) * 80);
+  }
+}
+@media (width >= 64rem) and (max-height: 900px) and (min-height: 768px) {
+  .main-title {
+    margin-top: calc(var(--spacing) * 70);
+  }
+}
+@media (width >= 64rem) and (max-height: 768px) {
+  .main-title {
+    margin-top: calc(var(--spacing) * 50);
+  }
+  .hero-parallax {
+    width: 65% !important;
+  }
+}
 .root {
   font-family: 'Inter', sans-serif;
   overflow: hidden;
