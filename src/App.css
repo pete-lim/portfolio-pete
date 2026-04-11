@@ -45,27 +45,23 @@ section {
   @apply flex flex-col min-h-screen max-w-screen max-h-max w-11/12 sm:w-8/10 lg:w-7/10 xl:w-5/10 justify-self-center justify-center relative;
   scroll-snap-align: start;
 }
-@media screen and (max-height: 800px) and (max-width: 600px) {
+@media screen and (max-height: 800px) and (max-width: 64rem) {
   #home {
     @apply py-30;
   }
 }
-@media (width >= 64rem /* 1024px */) and (min-height: 900px) {
-  .main-title {
-    margin-top: calc(var(--spacing) * 80);
-  }
-}
-@media (width >= 64rem) and (max-height: 900px) and (min-height: 768px) {
-  .main-title {
-    margin-top: calc(var(--spacing) * 70);
-  }
-}
 @media (width >= 64rem) and (max-height: 768px) {
-  .main-title {
-    margin-top: calc(var(--spacing) * 50);
-  }
+
   .hero-parallax {
-    width: 65% !important;
+    width: auto !important;
+    height: 60vh !important;
+    justify-content: center !important;
+  }
+  
+}
+@media (width >= 64rem) and (min-height: 768px){
+  .padded-text{
+    @apply pb-4;
   }
 }
 .root {

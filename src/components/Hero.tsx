@@ -58,9 +58,9 @@ export default function HeroSection() {
   }, []);
   return (
     <section className={`section lg:h-screen lg:items-center`} id="home">
-      <div className="hero-parallax max-lg:bg-none! lg:mb-8 lg:flex flex-col lg:h-7/12 items-center ">
+      <div className="hero-parallax max-lg:bg-none! lg:mb-8 lg:flex flex-col lg:h-7/12 items-center justify-center lg:justify-end">
         <span
-          className={`flex gap-2 ${zoomLevel > 100 ? 'lg:mt-60' : 'main-title'} mb-4 `}
+          className={`flex gap-2 mb-4 `}
         >
           <DistortText tag="header" className="lg:text-9xl! lg:text-white!">
             Hi,
@@ -81,7 +81,7 @@ export default function HeroSection() {
             Engineer,
           </DistortText>
         </span>
-        <span className="flex items-center gap-4">
+        <span className="flex items-center gap-4 padded-text">
           <DistortText className="lg:text-gray-200!">South</DistortText>
           <DistortText className="lg:text-gray-200!">Australia,</DistortText>
           <DistortText className="lg:text-gray-200!">Adelaide</DistortText>
